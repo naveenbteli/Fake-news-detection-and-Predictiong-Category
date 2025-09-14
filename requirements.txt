@@ -1,0 +1,8 @@
+flask
+scikit-learn
+numpy
+pandas
+spacy
+nltk
+
+# If you use any other libraries in preprocess.py, add them here
