@@ -4,7 +4,6 @@ numpy
 pandas
 spacy
 nltk
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
 
 
 # If you use any other libraries in preprocess.py, add them here
