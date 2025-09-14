@@ -4,9 +4,18 @@ import spacy
 import nltk
 from nltk.corpus import stopwords
 
-nlp = spacy.load("en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
+
 
 def full_preprocess(text): #for fake news model
     # Lowercase
