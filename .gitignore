@@ -1,0 +1,9 @@
+fake-news-detection.ipynb
+newscategory_final.ipynb
+app2.py
+ensemble_models_and_vectorizer.pkl
+Fake.csv
+True.csv
+venv
+.ipynb_checkpoints
+category_model_old.pkl
