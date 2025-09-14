@@ -15,13 +15,13 @@ def full_preprocess(text): #for fake news model
     translator = str.maketrans('', '', string.punctuation)
     text = text.translate(translator)
     # Remove brackets and content within
-    text = re.sub('\[.*\]','', text)
+    text = re.sub(r'\[.*\]', '', text)
     # Remove words with digits
-    text = re.sub('\S*\d\S*\s*','', text)
+    text = re.sub(r'\S*\d\S*\s*', '', text)
     # Remove URLs
     text = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', text, flags=re.MULTILINE)
     # Remove single characters surrounded by whitespace
-    text = re.sub(r'\s+[a-zA-Z]\s+', '', text)
+    text = re.sub(r'\b[a-zA-Z]\b', '', text)
     # Remove multiple spaces
     text = re.sub(r'\s+', ' ', text, flags=re.I)
     # Remove leading/trailing whitespace
