@@ -2,6 +2,7 @@ import pickle
 from flask import Flask, request, jsonify
 import numpy as np
 from preprocess import full_preprocess, preprocess_text, category_map
+import os
 
 app = Flask(__name__)
 
@@ -72,5 +73,6 @@ def predict_category():
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # fallback for local
+    app.run(host="0.0.0.0", port=port)
