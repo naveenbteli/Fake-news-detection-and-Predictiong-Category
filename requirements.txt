@@ -1,9 +1,10 @@
 flask
-scikit-learn
+scikit-learn==1.6.1
 numpy
 pandas
 spacy
 nltk
+xgboost==3.0.4
 
 
 # If you use any other libraries in preprocess.py, add them here
